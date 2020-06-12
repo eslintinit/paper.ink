@@ -63,6 +63,12 @@ export default {
         document.addEventListener('keydown', this.onKeyDown)
       }
     }
+  },
+
+  head() {
+    return {
+      title: this.page.title !== '' ? this.page.title : 'antcmd.'
+    }
   }
 }
 </script>
