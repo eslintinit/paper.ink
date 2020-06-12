@@ -92,7 +92,7 @@ export default {
       const { key, metaKey } = e
 
       if (key === 'Enter') {
-        const page = this.pages[0]
+        const page = this.filteredPages[0]
 
         if (page) {
           this.$router.push(`/${page.id}`)
@@ -111,6 +111,11 @@ export default {
 
     onChange({ target }) {
       this.searchQuery = target.value
+    }
+  },
+  head() {
+    return {
+      title: 'Pages'
     }
   }
 }
